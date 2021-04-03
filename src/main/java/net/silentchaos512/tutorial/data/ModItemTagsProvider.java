@@ -18,14 +18,22 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     protected void addTags() {
         copy(ModTags.Blocks.ORES_TEORITE, ModTags.Items.ORES_TEORITE);
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        copy(ModTags.Blocks.ORES_TITANIUM, ModTags.Items.ORES_TITANIUM);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
         copy(ModTags.Blocks.STORAGE_BLOCKS_TEORITE, ModTags.Items.STORAGE_BLOCKS_TEORITE);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
         tag(ModTags.Items.INGOTS_TEORITE).add(ModItems.TEORITE_INGOT.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_TEORITE);
 
+        tag(ModTags.Items.INGOTS_TITANIUM).add(ModItems.TITANIUM_INGOT.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_TITANIUM);
+
         tag(ModTags.Items.SWORD_TEORITE).add(ModItems.TEORITE_SWORD.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TEORITE);
 
+        tag(ModTags.Items.SWORD_TITANIUM).add(ModItems.TITANIUM_SWORD.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TITANIUM);
     }
 }

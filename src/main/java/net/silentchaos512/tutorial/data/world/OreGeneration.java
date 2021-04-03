@@ -20,7 +20,8 @@ import net.silentchaos512.tutorial.setup.ModBlocks;
 public class OreGeneration {
     public static void generateOres (final BiomeLoadingEvent event) {
         if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))){
-          generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TEORITE_ORE.get().defaultBlockState(), 8, 0, 50, 32);
+          generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TEORITE_ORE.get().defaultBlockState(), 13, 0, 63, 20);
+          generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TITANIUM_ORE.get().defaultBlockState(), 3, 1, 20, 1);
         }
     }
 

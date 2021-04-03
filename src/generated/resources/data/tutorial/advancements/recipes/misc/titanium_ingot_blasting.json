@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "tutorial:silver_ingot_blasting"
+      "tutorial:titanium_ingot_blasting"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "tutorial:teorite_ore"
+            "item": "tutorial:titanium_ore"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "tutorial:silver_ingot_blasting"
+        "recipe": "tutorial:titanium_ingot_blasting"
       }
     }
   },

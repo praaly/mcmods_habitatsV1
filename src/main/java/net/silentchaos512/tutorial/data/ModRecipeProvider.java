@@ -40,12 +40,28 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(ModItems.TITANIUM_SWORD.get())
+                .define('#', ModItems.TITANIUM_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
+                .save(consumer);
+
         CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.TEORITE_ORE.get()), ModItems.TEORITE_INGOT.get(), 0.7f, 200)
                 .unlockedBy("has_item", has(ModBlocks.TEORITE_ORE.get()))
-                .save(consumer, modId("silver_ingot_smelting"));
+                .save(consumer, modId("teorite_ingot_smelting"));
         CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.TEORITE_ORE.get()), ModItems.TEORITE_INGOT.get(), 0.7f, 100)
                 .unlockedBy("has_item", has(ModBlocks.TEORITE_ORE.get()))
-                .save(consumer, modId("silver_ingot_blasting"));
+                .save(consumer, modId("teorite_ingot_blasting"));
+
+        CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.TITANIUM_ORE.get()), ModItems.TITANIUM_INGOT.get(), 0.7f, 200)
+                .unlockedBy("has_item", has(ModBlocks.TITANIUM_ORE.get()))
+                .save(consumer, modId("titanium_ingot_smelting"));
+        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.TITANIUM_ORE.get()), ModItems.TITANIUM_INGOT.get(), 0.7f, 100)
+                .unlockedBy("has_item", has(ModBlocks.TITANIUM_ORE.get()))
+                .save(consumer, modId("titanium_ingot_blasting"));
     }
 
     private static ResourceLocation modId(String path) {

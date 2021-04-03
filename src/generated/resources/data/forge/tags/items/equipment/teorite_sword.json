@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tutorial:teorite_ingot",
     "tutorial:teorite_sword"
   ]
 }
