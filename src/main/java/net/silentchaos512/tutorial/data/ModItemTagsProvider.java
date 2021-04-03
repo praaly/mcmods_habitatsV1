@@ -21,9 +21,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.STORAGE_BLOCKS_TEORITE, ModTags.Items.STORAGE_BLOCKS_TEORITE);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
-
-
         tag(ModTags.Items.INGOTS_TEORITE).add(ModItems.TEORITE_INGOT.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_TEORITE);
+
+        tag(ModTags.Items.SWORD_TEORITE).add(ModItems.TEORITE_SWORD.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TEORITE);
+
     }
 }

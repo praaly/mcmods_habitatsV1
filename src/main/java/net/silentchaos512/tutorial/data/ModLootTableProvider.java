@@ -41,6 +41,7 @@ public class ModLootTableProvider extends LootTableProvider {
         protected void addTables() {
             dropSelf(ModBlocks.TEORITE_BLOCK.get());
             dropSelf(ModBlocks.TEORITE_ORE.get());
+            dropSelf(ModBlocks.TEORITE_SWORD.get());
         }
 
         @Override

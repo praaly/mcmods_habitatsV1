@@ -1,13 +1,15 @@
 package net.silentchaos512.tutorial.data;
 
 import net.minecraft.data.*;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.silentchaos512.tutorial.TutorialMod;
 import net.silentchaos512.tutorial.setup.ModBlocks;
 import net.silentchaos512.tutorial.setup.ModItems;
-
 import java.util.function.Consumer;
+
+import net.minecraft.item.Item;
 
 public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(DataGenerator generatorIn) {
@@ -26,6 +28,15 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.TEORITE_SWORD.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" X ")
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
 

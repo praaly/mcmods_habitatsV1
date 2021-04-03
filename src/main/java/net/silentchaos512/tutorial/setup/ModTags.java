@@ -25,8 +25,9 @@ public class ModTags {
     public static final class Items {
         public static final ITag.INamedTag<Item> ORES_TEORITE = forge("ores/silver");
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_TEORITE = forge("storage_blocks/silver");
-
         public static final ITag.INamedTag<Item> INGOTS_TEORITE = forge("ingots/silver");
+
+        public static final ITag.INamedTag<Item> SWORD_TEORITE = forge("ingots/silver");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.bind(new ResourceLocation("forge", path).toString());
