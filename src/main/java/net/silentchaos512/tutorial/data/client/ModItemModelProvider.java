@@ -18,9 +18,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("teorite_ore", modLoc("block/teorite_ore"));
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
 
         builder(itemGenerated, "teorite_ingot");
-        builder(itemGenerated, "teorite_sword");
+        builder(itemHandheld, "teorite_sword");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
