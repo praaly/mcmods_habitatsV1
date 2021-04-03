@@ -5,9 +5,11 @@ import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.silentchaos512.tutorial.TutorialMod;
-import net.silentchaos512.tutorial.setup.blocks.ModBlocks;
-import net.silentchaos512.tutorial.setup.items.ModItems;
+import net.silentchaos512.tutorial.setup.ModBlocks;
+import net.silentchaos512.tutorial.setup.ModItems;
 import java.util.function.Consumer;
+
+import net.minecraft.item.Item;
 
 public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(DataGenerator generatorIn) {

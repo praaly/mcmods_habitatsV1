@@ -9,7 +9,7 @@ import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.loot.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
-import net.silentchaos512.tutorial.setup.blocks.ModBlocks;
+import net.silentchaos512.tutorial.setup.ModBlocks;
 import net.silentchaos512.tutorial.setup.Registration;
 
 import java.util.List;

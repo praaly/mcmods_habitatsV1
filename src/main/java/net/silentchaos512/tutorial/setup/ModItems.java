@@ -1,11 +1,10 @@
-package net.silentchaos512.tutorial.setup.items;
+package net.silentchaos512.tutorial.setup;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.fml.RegistryObject;
-import net.silentchaos512.tutorial.setup.Registration;
 
 public class ModItems {
     public static final RegistryObject<Item> TEORITE_INGOT = Registration.ITEMS.register("teorite_ingot", () ->

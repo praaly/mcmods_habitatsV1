@@ -12,10 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import net.silentchaos512.tutorial.TutorialMod;
-import net.silentchaos512.tutorial.setup.blocks.ModBlocks;
-import net.silentchaos512.tutorial.setup.items.ModItems;
-import net.silentchaos512.tutorial.setup.recipes.ModContainerTypes;
-import net.silentchaos512.tutorial.setup.recipes.ModRecipeSerializers;
 
 public class Registration {
     public static final DeferredRegister<Block> BLOCKS = create(ForgeRegistries.BLOCKS);
