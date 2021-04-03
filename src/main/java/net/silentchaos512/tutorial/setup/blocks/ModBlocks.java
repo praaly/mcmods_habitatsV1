@@ -1,4 +1,4 @@
-package net.silentchaos512.tutorial.setup;
+package net.silentchaos512.tutorial.setup.blocks;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.silentchaos512.tutorial.setup.Registration;
 
 import java.util.function.Supplier;
 

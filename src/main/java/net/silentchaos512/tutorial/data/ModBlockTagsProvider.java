@@ -5,7 +5,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.silentchaos512.tutorial.TutorialMod;
-import net.silentchaos512.tutorial.setup.ModBlocks;
+import net.silentchaos512.tutorial.setup.blocks.ModBlocks;
 import net.silentchaos512.tutorial.setup.ModTags;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
