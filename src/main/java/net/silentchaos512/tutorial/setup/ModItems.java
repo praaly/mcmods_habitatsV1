@@ -11,7 +11,10 @@ public class ModItems {
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
 
     public static final RegistryObject<SwordItem> TEORITE_SWORD = Registration.ITEMS.register("teorite_sword", () ->
-            new SwordItem(ItemTier.IRON, 0, 0, (new Item.Properties().tab(ItemGroup.TAB_COMBAT))));
+            new SwordItem(ItemTier.IRON, 3, -2.4F, (new Item.Properties().tab(ItemGroup.TAB_COMBAT))));
+
+    public static final RegistryObject<SwordItem> TITANIUM_SWORD = Registration.ITEMS.register("titanium_sword", () ->
+            new SwordItem(ItemTier.IRON, 7, -2.4F, (new Item.Properties().tab(ItemGroup.TAB_COMBAT))));
 
     static void register() {}
 }

@@ -3,6 +3,7 @@
   "values": [
     "#forge:ingots/teorite_ingot",
     "#forge:ingots/titanium_ingot",
-    "#forge:equipment/teorite_sword"
+    "#forge:equipment/teorite_sword",
+    "#forge:equipment/titanium_sword"
   ]
 }

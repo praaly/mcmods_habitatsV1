@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "teorite_ingot");
         builder(itemGenerated, "titanium_ingot");
         builder(itemHandheld, "teorite_sword");
+        builder(itemHandheld, "titanium_sword");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

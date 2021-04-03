@@ -33,5 +33,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModTags.Items.SWORD_TEORITE).add(ModItems.TEORITE_SWORD.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TEORITE);
 
+        tag(ModTags.Items.SWORD_TITANIUM).add(ModItems.TITANIUM_SWORD.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TITANIUM);
     }
 }

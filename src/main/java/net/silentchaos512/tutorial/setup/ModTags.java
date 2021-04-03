@@ -38,6 +38,7 @@ public class ModTags {
 
         /*----------------------------   Equipments   ------------------------------*/
         public static final ITag.INamedTag<Item> SWORD_TEORITE = forge("equipment/teorite_sword");
+        public static final ITag.INamedTag<Item> SWORD_TITANIUM = forge("equipment/titanium_sword");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.bind(new ResourceLocation("forge", path).toString());
