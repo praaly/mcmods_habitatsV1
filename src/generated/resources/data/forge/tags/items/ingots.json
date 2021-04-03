@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "#forge:ingots/teorite_ingot",
+    "#forge:ingots/titanium_ingot",
     "#forge:equipment/teorite_sword"
   ]
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "tutorial:silver_ingot_smelting"
+      "tutorial:teorite_ingot_blasting"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "tutorial:silver_ingot_smelting"
+        "recipe": "tutorial:teorite_ingot_blasting"
       }
     }
   },

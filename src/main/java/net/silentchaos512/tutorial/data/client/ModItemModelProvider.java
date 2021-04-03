@@ -22,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
 
         builder(itemGenerated, "teorite_ingot");
+        builder(itemGenerated, "titanium_ingot");
         builder(itemHandheld, "teorite_sword");
     }
 
