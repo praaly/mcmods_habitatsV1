@@ -20,6 +20,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
         copy(ModTags.Blocks.ORES_TITANIUM, ModTags.Items.ORES_TITANIUM);
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
         copy(ModTags.Blocks.STORAGE_BLOCKS_TEORITE, ModTags.Items.STORAGE_BLOCKS_TEORITE);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 

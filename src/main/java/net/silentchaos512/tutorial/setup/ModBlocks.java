@@ -24,7 +24,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TITANIUM_ORE = register("titanium_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(15, 500)
-                    .harvestLevel(3)
+                    .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
