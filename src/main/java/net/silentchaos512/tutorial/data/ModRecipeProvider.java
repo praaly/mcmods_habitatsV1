@@ -16,24 +16,24 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
-        ShapelessRecipeBuilder.shapeless(ModItems.SILVER_INGOT.get(), 9)
-                .requires(ModBlocks.SILVER_BLOCK.get())
-                .unlockedBy("has_item", has(ModItems.SILVER_INGOT.get()))
+        ShapelessRecipeBuilder.shapeless(ModItems.TEORITE_INGOT.get(), 9)
+                .requires(ModBlocks.TEORITE_BLOCK.get())
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.SILVER_BLOCK.get())
-                .define('#', ModItems.SILVER_INGOT.get())
+        ShapedRecipeBuilder.shaped(ModBlocks.TEORITE_BLOCK.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_item", has(ModItems.SILVER_INGOT.get()))
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
 
-        CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.SILVER_ORE.get()), ModItems.SILVER_INGOT.get(), 0.7f, 200)
-                .unlockedBy("has_item", has(ModBlocks.SILVER_ORE.get()))
+        CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.TEORITE_ORE.get()), ModItems.TEORITE_INGOT.get(), 0.7f, 200)
+                .unlockedBy("has_item", has(ModBlocks.TEORITE_ORE.get()))
                 .save(consumer, modId("silver_ingot_smelting"));
-        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.SILVER_ORE.get()), ModItems.SILVER_INGOT.get(), 0.7f, 100)
-                .unlockedBy("has_item", has(ModBlocks.SILVER_ORE.get()))
+        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.TEORITE_ORE.get()), ModItems.TEORITE_INGOT.get(), 0.7f, 100)
+                .unlockedBy("has_item", has(ModBlocks.TEORITE_ORE.get()))
                 .save(consumer, modId("silver_ingot_blasting"));
     }
 

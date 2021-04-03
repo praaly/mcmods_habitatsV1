@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tutorial:silver_block"
+      "item": "tutorial:teorite_block"
     }
   ],
   "result": {
-    "item": "tutorial:silver_ingot",
+    "item": "tutorial:teorite_ingot",
     "count": 9
   }
 }

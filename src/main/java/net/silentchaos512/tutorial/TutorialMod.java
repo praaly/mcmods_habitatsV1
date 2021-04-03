@@ -1,7 +1,9 @@
 package net.silentchaos512.tutorial;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.common.Mod;
+import net.silentchaos512.tutorial.data.world.OreGeneration;
 import net.silentchaos512.tutorial.setup.Registration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +18,9 @@ public class TutorialMod {
     public TutorialMod() {
         Registration.register();
 
+
         // Register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOres);
         MinecraftForge.EVENT_BUS.register(this);
     }
 }

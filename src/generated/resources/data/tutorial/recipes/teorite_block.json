@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "tutorial:silver_ingot"
+      "item": "tutorial:teorite_ingot"
     }
   },
   "result": {
-    "item": "tutorial:silver_block"
+    "item": "tutorial:teorite_block"
   }
 }

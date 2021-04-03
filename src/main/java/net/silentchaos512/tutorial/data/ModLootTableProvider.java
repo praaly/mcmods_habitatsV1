@@ -39,8 +39,8 @@ public class ModLootTableProvider extends LootTableProvider {
     public static class ModBlockLootTables extends BlockLootTables {
         @Override
         protected void addTables() {
-            dropSelf(ModBlocks.SILVER_BLOCK.get());
-            dropSelf(ModBlocks.SILVER_ORE.get());
+            dropSelf(ModBlocks.TEORITE_BLOCK.get());
+            dropSelf(ModBlocks.TEORITE_ORE.get());
         }
 
         @Override

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tutorial:silver_block"
+          "name": "tutorial:teorite_block"
         }
       ],
       "conditions": [

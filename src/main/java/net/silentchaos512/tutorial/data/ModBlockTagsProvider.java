@@ -15,9 +15,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
-        tag(ModTags.Blocks.ORES_SILVER).add(ModBlocks.SILVER_ORE.get());
-        tag(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_SILVER);
-        tag(ModTags.Blocks.STORAGE_BLOCKS_SILVER).add(ModBlocks.SILVER_BLOCK.get());
-        tag(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER);
+        tag(ModTags.Blocks.ORES_TEORITE).add(ModBlocks.TEORITE_ORE.get());
+        tag(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_TEORITE);
+        tag(ModTags.Blocks.STORAGE_BLOCKS_TEORITE).add(ModBlocks.TEORITE_BLOCK.get());
+        tag(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_TEORITE);
     }
 }

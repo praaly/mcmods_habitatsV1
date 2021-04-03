@@ -1,3 +1,2 @@
-# Tutorial Minecraft Mod
+# HabitatMods ALPHA
 
-Video tutorials on [YouTube](https://www.youtube.com/silentchaos512)

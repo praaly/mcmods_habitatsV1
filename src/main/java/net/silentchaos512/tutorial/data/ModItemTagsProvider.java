@@ -16,14 +16,14 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
-        copy(ModTags.Blocks.ORES_SILVER, ModTags.Items.ORES_SILVER);
+        copy(ModTags.Blocks.ORES_TEORITE, ModTags.Items.ORES_TEORITE);
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
-        copy(ModTags.Blocks.STORAGE_BLOCKS_SILVER, ModTags.Items.STORAGE_BLOCKS_SILVER);
+        copy(ModTags.Blocks.STORAGE_BLOCKS_TEORITE, ModTags.Items.STORAGE_BLOCKS_TEORITE);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
 
 
-        tag(ModTags.Items.INGOTS_SILVER).add(ModItems.SILVER_INGOT.get());
-        tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_SILVER);
+        tag(ModTags.Items.INGOTS_TEORITE).add(ModItems.TEORITE_INGOT.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_TEORITE);
     }
 }

@@ -13,7 +13,7 @@ import net.minecraftforge.fml.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final RegistryObject<Block> SILVER_ORE = register("silver_ore", () ->
+    public static final RegistryObject<Block> TEORITE_ORE = register("teorite_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(3, 10)
                     .harvestLevel(2)
@@ -21,7 +21,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
+    public static final RegistryObject<Block> TEORITE_BLOCK = register("teorite_block", () ->
             new Block(AbstractBlock.Properties.of(Material.METAL)
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
