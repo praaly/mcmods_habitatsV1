@@ -31,7 +31,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.TEORITE_SWORD.get())
+        ShapedRecipeBuilder.shaped(ModItems.TEORITE_SWORD.get())
                 .define('#', ModItems.TEORITE_INGOT.get())
                 .define('X', Items.STICK)
                 .pattern(" # ")
