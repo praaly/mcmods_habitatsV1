@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:ingots/silver",
-    "#forge:ingots/silver"
+    "#forge:ingots/teorite_ingot",
+    "#forge:equipment/teorite_sword"
   ]
 }

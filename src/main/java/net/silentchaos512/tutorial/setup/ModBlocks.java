@@ -15,8 +15,16 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final RegistryObject<Block> TEORITE_ORE = register("teorite_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
-                    .strength(3, 10)
+                    .strength(3, 3)
                     .harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> TITANIUM_ORE = register("titanium_ore", () ->
+            new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .strength(15, 500)
+                    .harvestLevel(3)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#forge:ores/silver"
+    "#forge:ores/teorite_ore",
+    "#forge:ores/teorite_ore",
+    "#forge:ores/teorite_ore",
+    "#forge:ores/teorite_ore"
   ]
 }
