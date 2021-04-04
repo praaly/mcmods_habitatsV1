@@ -9,7 +9,6 @@
   "item.habitats.teorite_shovel": "Teorite Shovel",
   "item.habitats.teorite_hoe": "Teorite Hoe",
 
-<<<<<<< HEAD
   "block.habitats.titanium_ore": "Titanium Ore",
   "item.habitats.titanium_ingot": "Titanium Ingot",
   "item.habitats.titanium_sword": "Titanium Sword",
@@ -17,7 +16,6 @@
   "item.habitats.titanium_axe": "Titanium Axe",
   "item.habitats.titanium_shovel": "Titanium Shovel",
   "item.habitats.titanium_hoe": "Titanium Hoe"
-=======
   "item.habitats.wandering_florist_spawn_egg": "Wandering Florist Spawn Egg"
->>>>>>> master
+
 }
