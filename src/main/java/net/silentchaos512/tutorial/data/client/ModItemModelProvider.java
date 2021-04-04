@@ -24,7 +24,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "teorite_ingot");
         builder(itemGenerated, "titanium_ingot");
         builder(itemHandheld, "teorite_sword");
+<<<<<<< Updated upstream:src/main/java/net/silentchaos512/tutorial/data/client/ModItemModelProvider.java
+=======
+        builder(itemHandheld, "teorite_pickaxe");
+        builder(itemHandheld, "teorite_axe");
+        builder(itemHandheld, "teorite_shovel");
+        builder(itemHandheld, "teorite_hoe");
+
+>>>>>>> Stashed changes:src/main/java/net/praaly/habitats/data/client/ModItemModelProvider.java
         builder(itemHandheld, "titanium_sword");
+        builder(itemHandheld, "titanium_pickaxe");
+        builder(itemHandheld, "titanium_axe");
+        builder(itemHandheld, "titanium_shovel");
+        builder(itemHandheld, "titanium_hoe");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

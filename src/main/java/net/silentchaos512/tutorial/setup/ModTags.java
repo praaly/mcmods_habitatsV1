@@ -37,8 +37,22 @@ public class ModTags {
         public static final ITag.INamedTag<Item> INGOTS_TITANIUM = forge("ingots/titanium_ingot");
 
         /*----------------------------   Equipments   ------------------------------*/
+        /*--- Teorite ---*/
         public static final ITag.INamedTag<Item> SWORD_TEORITE = forge("equipment/teorite_sword");
+<<<<<<< Updated upstream:src/main/java/net/silentchaos512/tutorial/setup/ModTags.java
+=======
+        public static final ITag.INamedTag<Item> PICKAXE_TEORITE = forge("equipment/teorite_pickaxe");
+        public static final ITag.INamedTag<Item> AXE_TEORITE = forge("equipment/teorite_axe");
+        public static final ITag.INamedTag<Item> SHOVEL_TEORITE = forge("equipment/teorite_shovel");
+        public static final ITag.INamedTag<Item> HOE_TEORITE = forge("equipment/teorite_hoe");
+
+        /*--- Titanium ---*/
+>>>>>>> Stashed changes:src/main/java/net/praaly/habitats/setup/ModTags.java
         public static final ITag.INamedTag<Item> SWORD_TITANIUM = forge("equipment/titanium_sword");
+        public static final ITag.INamedTag<Item> PICKAXE_TITANIUM = forge("equipment/titanium_pickaxe");
+        public static final ITag.INamedTag<Item> AXE_TITANIUM = forge("equipment/titanium_axe");
+        public static final ITag.INamedTag<Item> SHOVEL_TITANIUM = forge("equipment/titanium_shovel");
+        public static final ITag.INamedTag<Item> HOE_TITANIUM = forge("equipment/titanium_hoe");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.bind(new ResourceLocation("forge", path).toString());

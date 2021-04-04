@@ -48,6 +48,45 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" X ")
                 .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
                 .save(consumer);
+        /* RECIPE FOR TEORITE_PICKAXE */
+        ShapedRecipeBuilder.shaped(ModItems.TITANIUM_PICKAXE.get())
+                .define('#', ModItems.TITANIUM_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("###")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TITANIUM_AXE */
+        ShapedRecipeBuilder.shaped(ModItems.TITANIUM_AXE.get())
+                .define('#', ModItems.TITANIUM_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("## ")
+                .pattern("#X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TITANIUM_SHOVEL */
+        ShapedRecipeBuilder.shaped(ModItems.TITANIUM_SHOVEL.get())
+                .define('#', ModItems.TITANIUM_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TITANIUM_HOE */
+        ShapedRecipeBuilder.shaped(ModItems.TITANIUM_HOE.get())
+                .define('#', ModItems.TITANIUM_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("## ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TITANIUM_INGOT.get()))
+                .save(consumer);
+
+
+
 
         CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.TEORITE_ORE.get()), ModItems.TEORITE_INGOT.get(), 0.7f, 200)
                 .unlockedBy("has_item", has(ModBlocks.TEORITE_ORE.get()))

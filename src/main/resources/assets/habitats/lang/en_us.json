@@ -1,0 +1,19 @@
+{
+  "block.habitats.teorite_block": "Block of Teorite",
+  "block.habitats.teorite_ore": "Teorite Ore",
+  "item.habitats.teorite_ingot": "Teorite Ingot",
+
+  "item.habitats.teorite_sword": "Teorite Sword",
+  "item.habitats.teorite_pickaxe": "Teorite Pickaxe",
+  "item.habitats.teorite_axe": "Teorite Axe",
+  "item.habitats.teorite_shovel": "Teorite Shovel",
+  "item.habitats.teorite_hoe": "Teorite Hoe",
+
+  "block.habitats.titanium_ore": "Titanium Ore",
+  "item.habitats.titanium_ingot": "Titanium Ingot",
+  "item.habitats.titanium_sword": "Titanium Sword",
+  "item.habitats.titanium_pickaxe": "Titanium Pickaxe",
+  "item.habitats.titanium_axe": "Titanium Axe",
+  "item.habitats.titanium_shovel": "Titanium Shovel",
+  "item.habitats.titanium_hoe": "Titanium Hoe"
+}
