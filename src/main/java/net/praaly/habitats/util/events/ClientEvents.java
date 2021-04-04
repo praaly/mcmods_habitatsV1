@@ -10,6 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.praaly.habitats.HabitatsMain;
 import net.praaly.habitats.setup.ModEntity;
 import net.praaly.habitats.setup.entities.dumb_traders.DumbTradersRenderer;
+import net.praaly.habitats.setup.entities.guard_traders.GuardTradersRenderer;
 
 public class ClientEvents {
 	
@@ -18,7 +19,7 @@ public class ClientEvents {
 		@SubscribeEvent
 		public static void doClientStuff(final FMLClientSetupEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(ModEntity.DUMB_TRADER.get(), DumbTradersRenderer::new);
-			RenderingRegistry.registerEntityRenderingHandler(ModEntity.GOOD_TRADER.get(), DumbTradersRenderer::new);
+			RenderingRegistry.registerEntityRenderingHandler(ModEntity.GOOD_TRADER.get(), GuardTradersRenderer::new);
 	    }
 	}
 	
