@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "tutorial:teorite_ore"
-  },
-  "result": "tutorial:teorite_ingot",
-  "experience": 0.7,
-  "cookingtime": 200
-}

@@ -3,27 +3,27 @@ loaderVersion="[34,)"
 license="The Unlicense"
 
 [[mods]]
-    modId="tutorial"
+    modId="habitats"
     version="${file.jarVersion}"
-    displayName="Tutorial Mod"
+    displayName="Habitats Mod"
     #updateJSONURL="http://myurl.me/" #optional
     #displayURL="http://example.com/" #optional
     #logoFile="examplemod.png" #optional
-    #credits="Thanks for this example mod goes to Java" #optional
-    #authors="Love, Cheese and small house plants" #optional
+    credits="Thanks for this example mod goes to Java" #optional
+    authors="@Praaly & @Nalikk" #optional
     description='''
-    Tutorial mod by SilentChaos512
+    Habitats Mod by @Praaly & @Nalikk
 
-    https://www.youtube.com/silentchaos512
+    Alpha Version
     '''
 
-[[dependencies.tutorial]]
+[[dependencies.habitats]]
     modId="forge"
     mandatory=true
     versionRange="[34,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.tutorial]]
+[[dependencies.habitats]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.3,1.17)"
