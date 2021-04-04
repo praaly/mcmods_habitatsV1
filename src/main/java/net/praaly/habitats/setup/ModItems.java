@@ -28,8 +28,12 @@ public class ModItems {
     public static final RegistryObject<HoeItem> TEORITE_HOE = Registration.ITEMS.register("teorite_hoe", () ->
             new customHoe(ToolMaterialList.TEORITE, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
 
-    public static final RegistryObject<ModSpawnEgg> WANDERING_FLORIST_SPAWN_EGG = Registration.ITEMS.register("wandering_florist_spawn_egg", () ->
-            new ModSpawnEgg(ModEntity.WANDERING_FLORIST, 0x2FFF00, 15377456, new Item.Properties().tab(HabitatsMain.TAB_OTHERS_HABITAT)));
+    public static final RegistryObject<ModSpawnEgg> WANDERING_FLORIST_SPAWN_EGG = Registration.ITEMS.register("dumb_trader_spawn_egg", () ->
+            new ModSpawnEgg(ModEntity.DUMB_TRADER, 0x2FFF00, 15377456, new Item.Properties().tab(HabitatsMain.TAB_OTHERS_HABITAT)));
+
+    public static final RegistryObject<ModSpawnEgg> GOOD_TRADER_SPAWN_EGG = Registration.ITEMS.register("good_trader_spawn_egg", () ->
+            new ModSpawnEgg(ModEntity.GOOD_TRADER, 0x2FFF00, 15377456, new Item.Properties().tab(HabitatsMain.TAB_OTHERS_HABITAT)));
+
 
     /*----------------------------   Equipments   ------------------------------*/
     /*----------------------------     TITANIUM    ------------------------------*/

@@ -32,7 +32,7 @@ import net.praaly.habitats.data.world.OreGeneration;
 import net.praaly.habitats.data.world.STStructures;
 import net.praaly.habitats.setup.ModEntity;
 import net.praaly.habitats.setup.Registration;
-import net.praaly.habitats.setup.entities.dumb_marchants.DumbMarchantEntity;
+import net.praaly.habitats.setup.entities.dumb_traders.DumbTradersEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -152,7 +152,8 @@ public class HabitatsMain {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void imstuff(final EntityAttributeCreationEvent event) {
-        event.put(ModEntity.WANDERING_FLORIST.get(), DumbMarchantEntity.Attributes().build());
+        event.put(ModEntity.DUMB_TRADER.get(), DumbTradersEntity.Attributes().build());
+        event.put(ModEntity.GOOD_TRADER.get(), DumbTradersEntity.Attributes().build());
     }
 
     public static boolean isCLibLoaded() {

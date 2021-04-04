@@ -1,4 +1,4 @@
-package net.praaly.habitats.setup.entities.dumb_marchants;
+package net.praaly.habitats.setup.entities.dumb_traders;
 
 import net.praaly.habitats.setup.entities.AbstractWanderer;
 
@@ -12,8 +12,8 @@ import net.minecraft.world.World;
 import net.praaly.habitats.setup.entities.ModVillagerTrades;
 
 
-public class DumbMarchantEntity extends AbstractWanderer {
-    public DumbMarchantEntity(EntityType<? extends DumbMarchantEntity> type, World worldIn) {
+public class DumbTradersEntity extends AbstractWanderer {
+    public DumbTradersEntity(EntityType<? extends DumbTradersEntity> type, World worldIn) {
         super(type, worldIn);
         this.sells = new VillagerTrades.ITrade[]{
                 // item, num emeralds to input, num items to output, max uses, priceMultiplierIn
