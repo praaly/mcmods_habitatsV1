@@ -1,6 +1,9 @@
 package net.silentchaos512.tutorial;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
@@ -10,6 +13,8 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.settings.DimensionStructuresSettings;
 import net.minecraft.world.gen.settings.StructureSeparationSettings;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -35,6 +40,13 @@ import java.util.Map;
 public class TutorialMod {
     public static final String MOD_ID = "tutorial";
     public static final Logger LOGGER = LogManager.getLogger();
+
+    public static final ItemGroup TAB_EQUIP_HABITAT = new ItemGroup( "tools") {
+        @OnlyIn(Dist.CLIENT)
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.OAK_BUTTON);
+        }
+    };
 
     public TutorialMod(){
         Registration.register();

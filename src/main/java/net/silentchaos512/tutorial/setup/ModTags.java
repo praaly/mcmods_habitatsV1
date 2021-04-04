@@ -38,6 +38,10 @@ public class ModTags {
 
         /*----------------------------   Equipments   ------------------------------*/
         public static final ITag.INamedTag<Item> SWORD_TEORITE = forge("equipment/teorite_sword");
+        public static final ITag.INamedTag<Item> PICKAXE_TEORITE = forge("equipment/teorite_pickaxe");
+        public static final ITag.INamedTag<Item> AXE_TEORITE = forge("equipment/teorite_axe");
+        public static final ITag.INamedTag<Item> SHOVEL_TEORITE = forge("equipment/teorite_shovel");
+        public static final ITag.INamedTag<Item> HOE_TEORITE = forge("equipment/teorite_hoe");
         public static final ITag.INamedTag<Item> SWORD_TITANIUM = forge("equipment/titanium_sword");
 
         private static ITag.INamedTag<Item> forge(String path) {

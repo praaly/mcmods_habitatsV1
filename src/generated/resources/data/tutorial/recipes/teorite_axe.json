@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#X ",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "tutorial:teorite_ingot"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tutorial:teorite_axe"
+  }
+}

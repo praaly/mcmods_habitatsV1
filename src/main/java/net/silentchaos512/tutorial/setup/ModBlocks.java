@@ -16,7 +16,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEORITE_ORE = register("teorite_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(3, 3)
-                    .harvestLevel(2)
+                    .harvestLevel(1)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));

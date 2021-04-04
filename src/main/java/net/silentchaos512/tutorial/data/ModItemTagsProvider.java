@@ -33,6 +33,18 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModTags.Items.SWORD_TEORITE).add(ModItems.TEORITE_SWORD.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TEORITE);
 
+        tag(ModTags.Items.PICKAXE_TEORITE).add(ModItems.TEORITE_PICKAXE.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.PICKAXE_TEORITE);
+
+        tag(ModTags.Items.AXE_TEORITE).add(ModItems.TEORITE_AXE.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.AXE_TEORITE);
+
+        tag(ModTags.Items.SHOVEL_TEORITE).add(ModItems.TEORITE_SHOVEL.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.SHOVEL_TEORITE);
+
+        tag(ModTags.Items.HOE_TEORITE).add(ModItems.TEORITE_HOE.get());
+        tag(Tags.Items.INGOTS).addTag(ModTags.Items.HOE_TEORITE);
+
         tag(ModTags.Items.SWORD_TITANIUM).add(ModItems.TITANIUM_SWORD.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.SWORD_TITANIUM);
     }

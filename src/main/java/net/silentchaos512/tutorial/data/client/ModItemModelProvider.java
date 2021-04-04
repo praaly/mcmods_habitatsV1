@@ -24,6 +24,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "teorite_ingot");
         builder(itemGenerated, "titanium_ingot");
         builder(itemHandheld, "teorite_sword");
+        builder(itemHandheld, "teorite_pickaxe");
+        builder(itemHandheld, "teorite_axe");
+        builder(itemHandheld, "teorite_shovel");
+        builder(itemHandheld, "teorite_hoe");
         builder(itemHandheld, "titanium_sword");
     }
 

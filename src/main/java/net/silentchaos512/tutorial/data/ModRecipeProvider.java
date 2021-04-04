@@ -18,11 +18,14 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+        /*----------------------------   Equipments   ------------------------------*/
+        /*----------------------------     TEORITE    ------------------------------*/
+        /* RECIPE FOR TEORITE_INGOT */
         ShapelessRecipeBuilder.shapeless(ModItems.TEORITE_INGOT.get(), 9)
                 .requires(ModBlocks.TEORITE_BLOCK.get())
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
-
+        /* RECIPE FOR TEORITE_BLOCK */
         ShapedRecipeBuilder.shaped(ModBlocks.TEORITE_BLOCK.get())
                 .define('#', ModItems.TEORITE_INGOT.get())
                 .pattern("###")
@@ -30,7 +33,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
-
+        /* RECIPE FOR TEORITE_SWORD */
         ShapedRecipeBuilder.shaped(ModItems.TEORITE_SWORD.get())
                 .define('#', ModItems.TEORITE_INGOT.get())
                 .define('X', Items.STICK)
@@ -39,7 +42,45 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" X ")
                 .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
                 .save(consumer);
-
+        /* RECIPE FOR TEORITE_PICKAXE */
+        ShapedRecipeBuilder.shaped(ModItems.TEORITE_PICKAXE.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("###")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TEORITE_AXE */
+        ShapedRecipeBuilder.shaped(ModItems.TEORITE_AXE.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("## ")
+                .pattern("#X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TEORITE_SHOVEL */
+        ShapedRecipeBuilder.shaped(ModItems.TEORITE_SHOVEL.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
+                .save(consumer);
+        /* RECIPE FOR TEORITE_HOE */
+        ShapedRecipeBuilder.shaped(ModItems.TEORITE_HOE.get())
+                .define('#', ModItems.TEORITE_INGOT.get())
+                .define('X', Items.STICK)
+                .pattern("## ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .unlockedBy("has_item", has(ModItems.TEORITE_INGOT.get()))
+                .save(consumer);
+        /*----------------------------   Equipments   ------------------------------*/
+        /*----------------------------     TITANIUM    ------------------------------*/
+        /* RECIPE FOR TITANIUM SWORD */
         ShapedRecipeBuilder.shaped(ModItems.TITANIUM_SWORD.get())
                 .define('#', ModItems.TITANIUM_INGOT.get())
                 .define('X', Items.STICK)
