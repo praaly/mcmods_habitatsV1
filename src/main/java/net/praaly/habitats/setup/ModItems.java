@@ -20,17 +20,19 @@ public class ModItems {
                 new SwordItem(ItemTier.STONE, 3, -2.4f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_pickaxe */
         public static final RegistryObject<PickaxeItem> TEORITE_PICKAXE = Registration.ITEMS.register("teorite_pickaxe", () ->
-                new customPickaxe(ToolMaterialList.teorite_pickaxe, 0, 0f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+                new customPickaxe(ToolMaterialList.teorite_equipements, 0, 0f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_pickaxe */
     public static final RegistryObject<AxeItem> TEORITE_AXE = Registration.ITEMS.register("teorite_axe", () ->
-            new customAxe(ToolMaterialList.teorite_axe, 9, -3.1f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customAxe(ToolMaterialList.teorite_equipements, 9, -3.1f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_shovel */
     public static final RegistryObject<ShovelItem> TEORITE_SHOVEL = Registration.ITEMS.register("teorite_shovel", () ->
-            new customShovel(ToolMaterialList.teorite_shovel, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customShovel(ToolMaterialList.teorite_equipements, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_hoe */
     public static final RegistryObject<HoeItem> TEORITE_HOE = Registration.ITEMS.register("teorite_hoe", () ->
-            new customHoe(ToolMaterialList.teorite_hoe, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customHoe(ToolMaterialList.teorite_equipements, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
 
+    public static final RegistryObject<ModSpawnEgg> WANDERING_FLORIST_SPAWN_EGG = Registration.ITEMS.register("wandering_florist_spawn_egg", () ->
+            new ModSpawnEgg(ModEntity.WANDERING_FLORIST, 0x2FFF00, 15377456, new Item.Properties().tab(HabitatsMain.TAB_OTHERS_HABITAT)));
 
 
     /*----------------------------   Equipments   ------------------------------*/

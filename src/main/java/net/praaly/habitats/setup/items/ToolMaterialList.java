@@ -7,10 +7,7 @@ public enum ToolMaterialList implements IItemTier {
 
     /*----------------------------   Equipments   ------------------------------*/
     /*----------------------------     TEORITE    ------------------------------*/
-    teorite_pickaxe(155, 5.0f, 0, 1,1),
-    teorite_axe(155, 5.0f, 0, 1,1),
-    teorite_shovel(155, 5.0f, 0, 1,1),
-    teorite_hoe(155, 5.0f, 0, 1,1);
+    teorite_equipements(155, 5.0f, 0, 1,1);
 
     private float speed, attackDamageBonus;
     private int uses, level, enchantmentValue;

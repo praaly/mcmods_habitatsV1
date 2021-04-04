@@ -16,10 +16,13 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,7 +30,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.praaly.habitats.data.world.STConfiguredStructures;
 import net.praaly.habitats.data.world.OreGeneration;
 import net.praaly.habitats.data.world.STStructures;
+import net.praaly.habitats.setup.ModEntity;
 import net.praaly.habitats.setup.Registration;
+import net.praaly.habitats.setup.entities.dumb_marchants.DumbMarchantEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,6 +42,7 @@ import java.util.Map;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HabitatsMain.MOD_ID)
+@Mod.EventBusSubscriber(modid = HabitatsMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class HabitatsMain {
     public static final String MOD_ID = "habitats";
     public static final Logger LOGGER = LogManager.getLogger();
@@ -47,13 +53,24 @@ public class HabitatsMain {
             return new ItemStack(Items.OAK_BUTTON);
         }
     };
+    public static final ItemGroup TAB_OTHERS_HABITAT = new ItemGroup( "others") {
+        @OnlyIn(Dist.CLIENT)
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.OAK_BUTTON);
+        }
+    };
+
 
     public HabitatsMain(){
         Registration.register();
 
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         STStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
         modEventBus.addListener(this::setup);
+
+
+        ModEntity.ENTITY_TYPES.register(modEventBus);
 
         // For events that happen after initialization. This is probably going to be use a lot.
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
@@ -66,8 +83,8 @@ public class HabitatsMain {
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOres);
         MinecraftForge.EVENT_BUS.register(this);
 
-
     }
+
     public void setup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
@@ -76,14 +93,6 @@ public class HabitatsMain {
         });
     }
 
-
-    /**
-     * This is the event you will use to add anything to any biome.
-     * This includes spawns, changing the biome's looks, messing with its surfacebuilders,
-     * adding carvers, spawning new features... etc
-     *
-     * Here, we will use this to add our structure to all biomes.
-     */
     public void biomeModification(final BiomeLoadingEvent event) {
         /*
          * Add our structure to all biomes including other modded biomes.
@@ -97,16 +106,6 @@ public class HabitatsMain {
         event.getGeneration().getStructures().add(() -> STConfiguredStructures.CONFIGURED_RUN_DOWN_HOUSE);
     }
 
-    /**
-     * Will go into the world's chunkgenerator and manually add our structure spacing.
-     * If the spacing is not added, the structure doesn't spawn.
-     *
-     * Use this for dimension blacklists for your structure.
-     * (Don't forget to attempt to remove your structure too from the map if you are blacklisting that dimension!)
-     * (It might have your structure in it already.)
-     *
-     * Basically use this to make absolutely sure the chunkgenerator can or cannot spawn your structure.
-     */
     private static Method GETCODEC_METHOD;
     public void addDimensionalSpacing(final WorldEvent.Load event) {
         if(event.getWorld() instanceof ServerWorld){
@@ -149,6 +148,15 @@ public class HabitatsMain {
             tempMap.putIfAbsent(STStructures.RUN_DOWN_HOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(STStructures.RUN_DOWN_HOUSE.get()));
             serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
         }
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void imstuff(final EntityAttributeCreationEvent event) {
+        event.put(ModEntity.WANDERING_FLORIST.get(), DumbMarchantEntity.Attributes().build());
+    }
+
+    public static boolean isCLibLoaded() {
+        return ModList.get().isLoaded("clib");
     }
 
 }
