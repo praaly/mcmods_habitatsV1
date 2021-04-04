@@ -12,24 +12,24 @@ public class ModItems {
     /*----------------------------     TEORITE    ------------------------------*/
     public static final RegistryObject<Item> TEORITE_INGOT = Registration.ITEMS.register("teorite_ingot", () ->
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
-
     /* teorite_sword */
     public static final RegistryObject<SwordItem> TEORITE_SWORD = Registration.ITEMS.register("teorite_sword", () ->
             new SwordItem(ItemTier.STONE, 3, -2.4f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_pickaxe */
     public static final RegistryObject<PickaxeItem> TEORITE_PICKAXE = Registration.ITEMS.register("teorite_pickaxe", () ->
-            new customPickaxe(ToolMaterialList.teorite_pickaxe, 0, 0f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customPickaxe(ToolMaterialList.TEORITE, 0, 0f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_pickaxe */
     public static final RegistryObject<AxeItem> TEORITE_AXE = Registration.ITEMS.register("teorite_axe", () ->
-            new customAxe(ToolMaterialList.teorite_axe, 9, -3.1f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customAxe(ToolMaterialList.TEORITE, 9, -3.1f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_shovel */
     public static final RegistryObject<ShovelItem> TEORITE_SHOVEL = Registration.ITEMS.register("teorite_shovel", () ->
-            new customShovel(ToolMaterialList.teorite_shovel, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customShovel(ToolMaterialList.TEORITE, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
     /* teorite_hoe */
     public static final RegistryObject<HoeItem> TEORITE_HOE = Registration.ITEMS.register("teorite_hoe", () ->
-            new customHoe(ToolMaterialList.teorite_hoe, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+            new customHoe(ToolMaterialList.TEORITE, 0, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
 
-
+    public static final RegistryObject<ModSpawnEgg> WANDERING_FLORIST_SPAWN_EGG = Registration.ITEMS.register("wandering_florist_spawn_egg", () ->
+            new ModSpawnEgg(ModEntity.WANDERING_FLORIST, 0x2FFF00, 15377456, new Item.Properties().tab(HabitatsMain.TAB_OTHERS_HABITAT)));
 
     /*----------------------------   Equipments   ------------------------------*/
     /*----------------------------     TITANIUM    ------------------------------*/
@@ -44,15 +44,20 @@ public class ModItems {
 
     public static final RegistryObject<PickaxeItem> TITANIUM_PICKAXE = Registration.ITEMS.register("titanium_pickaxe", () ->
             new customPickaxe(ToolMaterialList.TITANIUM, 3, 0f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+
     /* titanium_pickaxe */
     public static final RegistryObject<AxeItem> TITANIUM_AXE = Registration.ITEMS.register("titanium_axe", () ->
             new customAxe(ToolMaterialList.TITANIUM, 6, -3.1f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+
     /* titanium_shovel */
     public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = Registration.ITEMS.register("titanium_shovel", () ->
             new customShovel(ToolMaterialList.TITANIUM, 2, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+
     /* titanium_hoe */
     public static final RegistryObject<HoeItem> TITANIUM_HOE = Registration.ITEMS.register("titanium_hoe", () ->
             new customHoe(ToolMaterialList.TITANIUM, 2, -0.2f, (new Item.Properties().tab(HabitatsMain.TAB_EQUIP_HABITAT))));
+
+    /* titanium_ingot */
 
     // public static final RegistryObject<ArmorItem> TITANIUM_HELMET = Registration.ITEMS.register("titanium_sword", () ->
     //new ArmorItem(new ArmorMaterial("netherite", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.of(Items.NETHERITE_INGOT)),EquipmentSlotType.HEAD, (new Item.Properties()).tab(ItemGroup.TAB_COMBAT).));
