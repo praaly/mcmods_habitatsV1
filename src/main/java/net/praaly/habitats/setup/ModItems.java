@@ -2,10 +2,12 @@ package net.praaly.habitats.setup;
 
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
-import net.praaly.habitats.HabitatsMain;
 import net.praaly.habitats.setup.inventory.InventoryCreative;
 import net.praaly.habitats.setup.items.*;
-
+import net.praaly.habitats.setup.items.equipments.customAxe;
+import net.praaly.habitats.setup.items.equipments.customHoe;
+import net.praaly.habitats.setup.items.equipments.customPickaxe;
+import net.praaly.habitats.setup.items.equipments.customShovel;
 
 
 public class ModItems {

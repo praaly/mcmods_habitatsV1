@@ -1,4 +1,4 @@
-package net.praaly.habitats.setup.items;
+package net.praaly.habitats.setup.items.equipments;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 
