@@ -1,4 +1,9 @@
 {
+
+
+  "itemGroup.decoratives": "Decoratives",
+  "itemGroup.others": "Others",
+
   "block.habitats.teorite_block": "Block of Teorite",
   "block.habitats.teorite_ore": "Teorite Ore",
   "item.habitats.teorite_ingot": "Teorite Ingot",
@@ -16,7 +21,8 @@
   "item.habitats.titanium_axe": "Titanium Axe",
   "item.habitats.titanium_shovel": "Titanium Shovel",
   "item.habitats.titanium_hoe": "Titanium Hoe",
+
   "item.habitats.dumb_trader_spawn_egg": "Dumb Trader Spawn Egg",
-  "item.habitats.good_trader_spawn_egg": "Good Trader Spawn Egg"
+  "item.habitats.guard_trader_spawn_egg": "Guard Trader Spawn Egg"
 
 }

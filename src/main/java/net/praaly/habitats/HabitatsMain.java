@@ -1,6 +1,7 @@
 package net.praaly.habitats;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -33,6 +34,8 @@ import net.praaly.habitats.data.world.STStructures;
 import net.praaly.habitats.setup.ModEntity;
 import net.praaly.habitats.setup.Registration;
 import net.praaly.habitats.setup.entities.dumb_traders.DumbTradersEntity;
+import net.praaly.habitats.setup.entities.guard_traders.GuardTradersEntity;
+import net.praaly.habitats.setup.inventory.InventoryCreative;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -47,22 +50,9 @@ public class HabitatsMain {
     public static final String MOD_ID = "habitats";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final ItemGroup TAB_EQUIP_HABITAT = new ItemGroup( "tools") {
-        @OnlyIn(Dist.CLIENT)
-        public ItemStack makeIcon() {
-            return new ItemStack(Items.OAK_BUTTON);
-        }
-    };
-    public static final ItemGroup TAB_OTHERS_HABITAT = new ItemGroup( "others") {
-        @OnlyIn(Dist.CLIENT)
-        public ItemStack makeIcon() {
-            return new ItemStack(Items.OAK_BUTTON);
-        }
-    };
-
-
     public HabitatsMain(){
         Registration.register();
+        new InventoryCreative();
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -91,7 +81,8 @@ public class HabitatsMain {
             STStructures.setupStructures();
             STConfiguredStructures.registerConfiguredStructures();
         });
-    }
+
+          }
 
     public void biomeModification(final BiomeLoadingEvent event) {
         /*
@@ -111,12 +102,6 @@ public class HabitatsMain {
         if(event.getWorld() instanceof ServerWorld){
             ServerWorld serverWorld = (ServerWorld)event.getWorld();
 
-            /*
-             * Skip Terraforged's chunk generator as they are a special case of a mod locking down their chunkgenerator.
-             * They will handle your structure spacing for your if you add to WorldGenRegistries.NOISE_GENERATOR_SETTINGS in your structure's registration.
-             * This here is done with reflection as this tutorial is not about setting up and using Mixins.
-             * If you are using mixins, you can call the codec method with an invoker mixin instead of using reflection.
-             */
             try {
                 if(GETCODEC_METHOD == null) GETCODEC_METHOD = ObfuscationReflectionHelper.findMethod(ChunkGenerator.class, "codec");
                 ResourceLocation cgRL = Registry.CHUNK_GENERATOR.getKey((Codec<? extends ChunkGenerator>) GETCODEC_METHOD.invoke(serverWorld.getChunkSource().generator));
@@ -126,24 +111,11 @@ public class HabitatsMain {
                 HabitatsMain.LOGGER.error("Was unable to check if " + serverWorld.dimension().location() + " is using Terraforged's ChunkGenerator.");
             }
 
-            /*
-             * Prevent spawning our structure in Vanilla's superflat world as
-             * people seem to want their superflat worlds free of modded structures.
-             * Also that vanilla superflat is really tricky and buggy to work with in my experience.
-             */
             if(serverWorld.getChunkSource().getGenerator() instanceof FlatChunkGenerator &&
                     serverWorld.dimension().equals(World.OVERWORLD)){
                 return;
             }
 
-            /*
-             * putIfAbsent so people can override the spacing with dimension datapacks themselves if they wish to customize spacing more precisely per dimension.
-             * Requires AccessTransformer  (see resources/META-INF/accesstransformer.cfg)
-             *
-             * NOTE: if you add per-dimension spacing configs, you can't use putIfAbsent as WorldGenRegistries.NOISE_GENERATOR_SETTINGS in FMLCommonSetupEvent
-             * already added your default structure spacing to some dimensions. You would need to override the spacing with .put(...)
-             * And if you want to do dimension blacklisting, you need to remove the spacing entry entirely from the map below to prevent generation safely.
-             */
             Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(serverWorld.getChunkSource().generator.getSettings().structureConfig());
             tempMap.putIfAbsent(STStructures.RUN_DOWN_HOUSE.get(), DimensionStructuresSettings.DEFAULTS.get(STStructures.RUN_DOWN_HOUSE.get()));
             serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
@@ -153,7 +125,7 @@ public class HabitatsMain {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void imstuff(final EntityAttributeCreationEvent event) {
         event.put(ModEntity.DUMB_TRADER.get(), DumbTradersEntity.Attributes().build());
-        event.put(ModEntity.GOOD_TRADER.get(), DumbTradersEntity.Attributes().build());
+        event.put(ModEntity.GUARD_TRADER.get(), GuardTradersEntity.Attributes().build());
     }
 
     public static boolean isCLibLoaded() {
