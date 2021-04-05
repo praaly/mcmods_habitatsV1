@@ -1,4 +1,4 @@
-package net.praaly.habitats.setup.entities;
+package net.praaly.habitats.setup.entities.dumb_traders;
 
 import java.util.EnumSet;
 
@@ -6,17 +6,7 @@ import javax.annotation.Nullable;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.goal.AvoidEntityGoal;
-import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.entity.ai.goal.LookAtCustomerGoal;
-import net.minecraft.entity.ai.goal.LookAtGoal;
-import net.minecraft.entity.ai.goal.LookAtWithoutMovingGoal;
-import net.minecraft.entity.ai.goal.MoveTowardsRestrictionGoal;
-import net.minecraft.entity.ai.goal.PanicGoal;
-import net.minecraft.entity.ai.goal.SwimGoal;
-import net.minecraft.entity.ai.goal.TemptGoal;
-import net.minecraft.entity.ai.goal.TradeWithPlayerGoal;
-import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
+import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
 import net.minecraft.entity.merchant.villager.VillagerTrades;
@@ -46,10 +36,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.common.util.Constants;
 
 @SuppressWarnings("unused")
-public class AbstractWanderer extends AbstractVillagerEntity {
+public class AbstractDumb extends AbstractVillagerEntity {
     @Nullable
     private BlockPos wanderTarget;
     private BlockPos homePos;
@@ -57,9 +46,10 @@ public class AbstractWanderer extends AbstractVillagerEntity {
     protected VillagerTrades.ITrade[] sells;
     protected VillagerTrades.ITrade[] buys;
 
-    public AbstractWanderer(EntityType<? extends AbstractWanderer> type, World worldIn) {
+    public AbstractDumb(EntityType<? extends AbstractDumb> type, World worldIn) {
         super(type, worldIn);
         this.forcedLoading = true;
+        //this.setItemSlot(EquipmentSlotType.HEAD, new ItemStack(Items.IRON_SWORD));
     }
 
     @Override
@@ -94,7 +84,7 @@ public class AbstractWanderer extends AbstractVillagerEntity {
         this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, BlazeEntity.class, 12.0F, 0.5D, 0.5D));
         this.goalSelector.addGoal(1, new PanicGoal(this, 0.25D));
         this.goalSelector.addGoal(1, new LookAtCustomerGoal(this));
-        this.goalSelector.addGoal(2, new AbstractWanderer.MoveToGoal(this, 2.0D, 0.35D));
+        this.goalSelector.addGoal(2, new AbstractDumb.MoveToGoal(this, 2.0D, 0.35D));
         this.goalSelector.addGoal(3, new TemptGoal(this, 0.35D, false, Ingredient.of(Items.EMERALD)));
         this.goalSelector.addGoal(4, new MoveTowardsRestrictionGoal(this, 0.35D));
         this.goalSelector.addGoal(8, new WaterAvoidingRandomWalkingGoal(this, 0.35D));
@@ -196,11 +186,11 @@ public class AbstractWanderer extends AbstractVillagerEntity {
     }
 
     class MoveToGoal extends Goal {
-        final AbstractWanderer traderEntity;
+        final AbstractDumb traderEntity;
         final double maxDistance;
         final double speed;
 
-        MoveToGoal(AbstractWanderer traderEntityIn, double distanceIn, double speedIn) {
+        MoveToGoal(AbstractDumb traderEntityIn, double distanceIn, double speedIn) {
             this.traderEntity = traderEntityIn;
             this.maxDistance = distanceIn;
             this.speed = speedIn;
@@ -212,7 +202,7 @@ public class AbstractWanderer extends AbstractVillagerEntity {
          */
         public void resetTask() {
             this.traderEntity.setWanderTarget((BlockPos) null);
-            AbstractWanderer.this.navigation.stop();
+            AbstractDumb.this.navigation.stop();
         }
 
         /**
@@ -236,13 +226,13 @@ public class AbstractWanderer extends AbstractVillagerEntity {
          */
         public void tick() {
             BlockPos blockpos = this.traderEntity.getWanderTarget();
-            if (blockpos != null && AbstractWanderer.this.navigation.isDone()) {
+            if (blockpos != null && AbstractDumb.this.navigation.isDone()) {
                 if (this.isWithinDistance(blockpos, 10.0D)) {
                     Vector3d vec3d = (new Vector3d((double) blockpos.getX() - this.traderEntity.getX(), (double) blockpos.getY() - this.traderEntity.getY(), (double) blockpos.getZ() - this.traderEntity.getZ())).normalize();
                     Vector3d vec3d1 = vec3d.scale(10.0D).add(this.traderEntity.getX(), this.traderEntity.getY(), this.traderEntity.getZ());
-                    AbstractWanderer.this.navigation.moveTo(vec3d1.x, vec3d1.y, vec3d1.z, this.speed);
+                    AbstractDumb.this.navigation.moveTo(vec3d1.x, vec3d1.y, vec3d1.z, this.speed);
                 } else {
-                    AbstractWanderer.this.navigation.moveTo((double) blockpos.getX(), (double) blockpos.getY(), (double) blockpos.getZ(), this.speed);
+                    AbstractDumb.this.navigation.moveTo((double) blockpos.getX(), (double) blockpos.getY(), (double) blockpos.getZ(), this.speed);
                 }
             }
 

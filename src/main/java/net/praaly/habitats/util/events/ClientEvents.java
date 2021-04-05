@@ -19,7 +19,7 @@ public class ClientEvents {
 		@SubscribeEvent
 		public static void doClientStuff(final FMLClientSetupEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(ModEntity.DUMB_TRADER.get(), DumbTradersRenderer::new);
-			RenderingRegistry.registerEntityRenderingHandler(ModEntity.GOOD_TRADER.get(), GuardTradersRenderer::new);
+			RenderingRegistry.registerEntityRenderingHandler(ModEntity.GUARD_TRADER.get(), GuardTradersRenderer::new);
 	    }
 	}
 	

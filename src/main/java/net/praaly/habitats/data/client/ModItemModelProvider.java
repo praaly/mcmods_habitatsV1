@@ -21,20 +21,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
         ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
 
+        /* INGOTS */
         builder(itemGenerated, "teorite_ingot");
         builder(itemGenerated, "titanium_ingot");
 
+        /* EQUIPMENTS TEORITE */
         builder(itemHandheld, "teorite_sword");
         builder(itemHandheld, "teorite_pickaxe");
         builder(itemHandheld, "teorite_axe");
         builder(itemHandheld, "teorite_shovel");
         builder(itemHandheld, "teorite_hoe");
 
+        /* EQUIPMENTS TITANIUM */
         builder(itemHandheld, "titanium_sword");
         builder(itemHandheld, "titanium_pickaxe");
         builder(itemHandheld, "titanium_axe");
         builder(itemHandheld, "titanium_shovel");
         builder(itemHandheld, "titanium_hoe");
+
+        /* EGGS */
+        builder(itemGenerated, "dumb_trader_spawn_egg");
+        builder(itemGenerated, "guard_trader_spawn_egg");
+
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
