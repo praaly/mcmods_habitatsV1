@@ -28,7 +28,6 @@ public class GuardTradersRenderer extends MobRenderer<GuardTradersEntity, Player
 
     }
 
-
     @Override
     public ResourceLocation getTextureLocation(GuardTradersEntity entity) {
         return field_217780_a;
