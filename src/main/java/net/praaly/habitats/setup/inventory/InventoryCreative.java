@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.praaly.habitats.setup.ModItems;
 
 public class InventoryCreative {
     public static final ItemGroup TAB_DECO_HABITAT = new ItemGroup( "decoratives") {
@@ -16,7 +17,7 @@ public class InventoryCreative {
     public static final ItemGroup TAB_EQUIP_HABITAT = new ItemGroup( "tools") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(Items.STONE_SWORD);
+            return new ItemStack(ModItems.TITANIUM_SWORD.get());
         }
     };
     public static final ItemGroup TAB_OTHERS_HABITAT = new ItemGroup( "others") {
