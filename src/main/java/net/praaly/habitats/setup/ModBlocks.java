@@ -1,14 +1,12 @@
 package net.praaly.habitats.setup;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.praaly.habitats.setup.inventory.InventoryCreative;
 
 import java.util.function.Supplier;
 
@@ -20,7 +18,7 @@ public class ModBlocks {
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
-
+    //new
     public static final RegistryObject<Block> TITANIUM_ORE = register("titanium_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(15, 500)
@@ -31,6 +29,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TEORITE_BLOCK = register("teorite_block", () ->
             new Block(AbstractBlock.Properties.of(Material.METAL)
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
+    /* CUSOTM BLOCKS */
+    public static final RegistryObject<Block> KITCHEN_CHEST = register("kitchen_cabinet", () ->
+            new Block(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 

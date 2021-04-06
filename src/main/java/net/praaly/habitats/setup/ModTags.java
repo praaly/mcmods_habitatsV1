@@ -15,6 +15,7 @@ public class ModTags {
 
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_TEORITE = forge("storage_blocks/teorite_block");
 
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_CHEST = forge("chests/kitchen_chest");
 
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.bind(new ResourceLocation("forge", path).toString());

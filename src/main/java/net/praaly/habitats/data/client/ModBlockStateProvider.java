@@ -16,5 +16,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.TEORITE_BLOCK.get());
         simpleBlock(ModBlocks.TEORITE_ORE.get());
         simpleBlock(ModBlocks.TITANIUM_ORE.get());
+        simpleBlock(ModBlocks.KITCHEN_CHEST.get());
     }
 }
