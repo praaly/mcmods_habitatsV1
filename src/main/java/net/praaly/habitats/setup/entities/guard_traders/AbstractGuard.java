@@ -1,46 +1,37 @@
 package net.praaly.habitats.setup.entities.guard_traders;
 
+
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.item.ExperienceOrbEntity;
-import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.merchant.villager.VillagerTrades;
 import net.minecraft.entity.monster.*;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.NBTUtil;
-import net.minecraft.stats.Stats;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.Difficulty;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.entity.monster.ZombieEntity;
-import net.minecraft.world.spawner.WorldEntitySpawner;
+
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
 
 @SuppressWarnings("unused")
 public class AbstractGuard extends MonsterEntity {
+
+    ItemStack weapon = new ItemStack(Items.IRON_SWORD, 1);
+
     @Nullable
     private BlockPos homePos;
 
     public AbstractGuard(EntityType<? extends AbstractGuard> type, World worldIn) {
         super(type, worldIn);
         this.forcedLoading = true;
-        //this.setItemSlot(EquipmentSlotType.HEAD, new ItemStack(Items.IRON_SWORD));
+        //this.setItemSlot(EquipmentSlotType.MAINHAND,  new ItemStack(Items.SHIELD));
     }
 
     //public void setHome(BlockPos pos){

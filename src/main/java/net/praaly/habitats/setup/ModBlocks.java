@@ -34,7 +34,6 @@ public class ModBlocks {
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 
-
     static void register() {}
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {

@@ -15,6 +15,7 @@ public class ModTags {
 
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_TEORITE = forge("storage_blocks/teorite_block");
 
+
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.bind(new ResourceLocation("forge", path).toString());
         }
@@ -31,8 +32,7 @@ public class ModTags {
 
         /*----------------------------   Storage_blocks   ------------------------------*/
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_TEORITE = forge("storage_blocks/teorite_block");
-
-        /*----------------------------   Ingots  ------------------------------*/
+         /*----------------------------   Ingots  ------------------------------*/
         public static final ITag.INamedTag<Item> INGOTS_TEORITE = forge("ingots/teorite_ingot");
         public static final ITag.INamedTag<Item> INGOTS_TITANIUM = forge("ingots/titanium_ingot");
 

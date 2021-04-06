@@ -2,6 +2,11 @@ package net.praaly.habitats.setup.entities.guard_traders;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.entity.PlayerRenderer;
+import net.minecraft.client.renderer.entity.ZombieRenderer;
+import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -9,10 +14,12 @@ import net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer;
 import net.minecraft.client.renderer.entity.layers.HeadLayer;
 import net.minecraft.client.renderer.entity.model.PlayerModel;
 import net.minecraft.client.renderer.entity.model.VillagerModel;
+import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.vector.Vector3f;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.praaly.habitats.HabitatsMain;
@@ -23,9 +30,9 @@ public class GuardTradersRenderer extends MobRenderer<GuardTradersEntity, Player
 
     public GuardTradersRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new PlayerModel<>(0.0F, true), 0.5F);
+
         this.addLayer(new HeadLayer<>(this));
         this.addLayer(new CrossedArmsItemLayer<>(this));
-
     }
 
     @Override
