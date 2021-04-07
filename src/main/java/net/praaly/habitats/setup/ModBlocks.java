@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
-import net.praaly.habitats.setup.inventory.InventoryCreative;
+import net.praaly.habitats.setup.blocks.kitchenChest;
 
 import java.util.function.Supplier;
 
@@ -34,7 +34,7 @@ public class ModBlocks {
 
     /* CUSOTM BLOCKS */
     public static final RegistryObject<Block> KITCHEN_CHEST = register("kitchen_cabinet", () ->
-            new Block(AbstractBlock.Properties.of(Material.METAL)
+            new kitchenChest(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)
