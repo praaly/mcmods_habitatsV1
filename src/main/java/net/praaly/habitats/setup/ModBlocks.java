@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.praaly.habitats.setup.blocks.Quarry.Quarry;
 import net.praaly.habitats.setup.blocks.kitchenBorder;
 import net.praaly.habitats.setup.blocks.kitchenChest;
 import net.praaly.habitats.setup.inventory.InventoryCreative;
@@ -47,6 +48,11 @@ public class ModBlocks {
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<Quarry> QUARRY = register("quarry_block", () ->
+            new Quarry(AbstractBlock.Properties.of(Material.METAL)
+                    .strength(4, 20)
                     .sound(SoundType.METAL)));
 
     static void register() {}
