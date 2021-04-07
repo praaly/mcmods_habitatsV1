@@ -1,14 +1,14 @@
 package net.praaly.habitats.setup;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.praaly.habitats.setup.blocks.kitchenBorder;
+import net.praaly.habitats.setup.blocks.kitchenChest;
+import net.praaly.habitats.setup.inventory.InventoryCreative;
 
 import java.util.function.Supplier;
 
@@ -20,7 +20,7 @@ public class ModBlocks {
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
-
+    //new
     public static final RegistryObject<Block> TITANIUM_ORE = register("titanium_ore", () ->
             new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(15, 500)
@@ -34,6 +34,21 @@ public class ModBlocks {
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 
+    /* CUSOTM BLOCKS*/
+    public static final RegistryObject<Block> KITCHEN_CHEST = register("kitchen_cabinet", () ->
+            new kitchenChest(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> KITCHEN_BORDER = register("kitchen_border", () ->
+            new kitchenBorder(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
     static void register() {}
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
@@ -42,8 +57,10 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> ret = registerNoItem(name, block);
-        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(InventoryCreative.TAB_DECO_HABITAT)));
         return ret;
     }
+
+
 }
 

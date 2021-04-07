@@ -25,6 +25,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_TEORITE);
 
 
+        tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_CHEST).add(ModBlocks.KITCHEN_CHEST.get());
+        tag(Tags.Blocks.CHESTS).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_CHEST);
+
+        tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_BORDER).add(ModBlocks.KITCHEN_BORDER.get());
+        tag(Tags.Blocks.CHESTS).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_BORDER);
+
+
+
     }
 
 
