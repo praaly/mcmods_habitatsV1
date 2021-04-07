@@ -28,6 +28,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_CABINET).add(ModBlocks.KITCHEN_CABINET.get());
         tag(Tags.Blocks.CHESTS).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_CABINET);
 
+        tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_BORDER).add(ModBlocks.KITCHEN_BORDER.get());
+        tag(Tags.Blocks.CHESTS).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_BORDER);
+
+
+
     }
 
 

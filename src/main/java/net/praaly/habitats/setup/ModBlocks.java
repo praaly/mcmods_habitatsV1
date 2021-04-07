@@ -4,12 +4,11 @@ package net.praaly.habitats.setup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
-import net.praaly.habitats.setup.blocks.KitchenCabinet;
-import net.praaly.habitats.setup.blocks.KitchenCabinetTile;
+import net.praaly.habitats.setup.blocks.kitchenBorder;
+import net.praaly.habitats.setup.blocks.kitchenChest;
+import net.praaly.habitats.setup.inventory.InventoryCreative;
 
 import java.util.function.Supplier;
 
@@ -36,16 +35,19 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
 
     /* CUSOTM BLOCKS*/
-    public static final RegistryObject<Block> KITCHEN_CABINET = register("kitchen_cabinet", () ->
-            new KitchenCabinet(AbstractBlock.Properties.of(Material.METAL)
+    public static final RegistryObject<Block> KITCHEN_CHEST = register("kitchen_cabinet", () ->
+            new kitchenChest(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 
-    public static final RegistryObject<TileEntityType<KitchenCabinetTile>> KITCHEN_CABINET_TILE =
-            registerTile("kitchen_cabinet_tile", KitchenCabinetTile::new, KITCHEN_CABINET);
-
+    public static final RegistryObject<Block> KITCHEN_BORDER = register("kitchen_border", () ->
+            new kitchenBorder(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
 
     static void register() {}
 
@@ -55,19 +57,8 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> ret = registerNoItem(name, block);
-        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(InventoryCreative.TAB_DECO_HABITAT)));
         return ret;
-    }
-
-    /**
-     * @param name non-localized name
-     * @param tile Supplier for tile, see KITCHEN_CHEST_TILE
-     * @param block Associated Block registry object
-     * @param <T> Class of tile entity. You may not have to explicitly state it
-     * @return RegistryObject of the tile entity
-     */
-    private static <T extends TileEntity> RegistryObject<TileEntityType<T>> registerTile(String name, Supplier<T> tile, RegistryObject<Block> block) {
-        return Registration.TILE_ENTITIES.register(name, () -> TileEntityType.Builder.of(tile, block.get()).build(null));
     }
 
 

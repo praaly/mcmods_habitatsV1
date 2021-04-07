@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:chests/kitchen_cabinet"
+    "#forge:chests/kitchen_chest",
+    "#forge:chests/kitchen_border"
   ]
 }
