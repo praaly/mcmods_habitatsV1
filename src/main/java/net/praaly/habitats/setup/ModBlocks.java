@@ -32,13 +32,14 @@ public class ModBlocks {
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 
-    /* CUSOTM BLOCKS */
+    /* CUSOTM BLOCKS*/
     public static final RegistryObject<Block> KITCHEN_CHEST = register("kitchen_cabinet", () ->
             new kitchenChest(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
+
 
     static void register() {}
 
@@ -51,5 +52,7 @@ public class ModBlocks {
         Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
         return ret;
     }
+
+
 }
 
