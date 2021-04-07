@@ -27,7 +27,7 @@ public class InventoryCreative {
     public static final ItemGroup TAB_DECO_HABITAT = new ItemGroup( "decoratives") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.KITCHEN_CHEST.get());
+            return new ItemStack(ModBlocks.KITCHEN_CABINET.get());
         }
     };
 
