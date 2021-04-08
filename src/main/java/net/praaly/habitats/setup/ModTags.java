@@ -15,8 +15,13 @@ public class ModTags {
 
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_TEORITE = forge("storage_blocks/teorite_block");
 
-        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_CABINET = forge("kitchen/kitchen_chest");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_CABINET = forge("kitchen/kitchen_cabinet");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_CABINET_UP = forge("kitchen/kitchen_cabinet_up");
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_BORDER = forge("kitchen/kitchen_border");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_COOK = forge("kitchen/kitchen_cook");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_SINK = forge("kitchen/kitchen_sink");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_KITCHEN_TRASH = forge("kitchen/kitchen_trash");
+
         public static final ITag.INamedTag<Block> QUARRY_BLOCK = forge("machine/quarry_block");
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.bind(new ResourceLocation("forge", path).toString());

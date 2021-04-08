@@ -4,9 +4,12 @@ import net.minecraft.util.ResourceLocation;
 import net.praaly.habitats.HabitatsMain;
 
 public enum StorageContainers {
-    KITCHEN_CABINET(1, 4, 8, 20, 8, 81,
-            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_cabinet_gui.png"));
-
+    KITCHEN_CABINET(2, 2, 74, 20, 8, 85,
+            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_cabinet_gui.png")),
+    KITCHEN_CABINET_UP(2, 2, 74, 20, 8, 85,
+                            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_cabinet_gui.png")),
+    KITCHEN_TRASH(1, 1, 74, 20, 8, 85,
+            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_trash_gui.png"));
     private final int rows;
     private final int columns;
     private final int containerX;
