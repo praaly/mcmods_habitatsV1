@@ -27,10 +27,8 @@
 
   "container.habitats.kitchen_cabinet": "Cabinet Storage",
   "container.habitats.kitchen_cabinet_up": "Cabinet Storage",
-  "container.habitats.kitchen_trashp": "Trash",
+  "container.habitats.kitchen_trash": "Trash",
 
-  "block.habitats.kitchen_cabinet": "Kitchen Cabinet",
-  "block.habitats.kitchen_cabinet_up": "Kitchen Cabinet Up",
   "block.habitats.kitchen_cook": "Kitchen Cook",
   "block.habitats.kitchen_sink": "Kitchen Sink",
   "block.habitats.kitchen_border": "Kitchen Border",
