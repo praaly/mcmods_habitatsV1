@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#forge:chests/kitchen_chest",
-    "#forge:chests/kitchen_border",
     "#forge:machine/quarry_block"
   ]
 }

@@ -42,7 +42,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(ModBlocks.TEORITE_BLOCK.get());
             dropSelf(ModBlocks.TEORITE_ORE.get());
             dropSelf(ModBlocks.TITANIUM_ORE.get());
-            dropSelf(ModBlocks.KITCHEN_CHEST.get());
+            dropSelf(ModBlocks.KITCHEN_CABINET.get());
             dropSelf(ModBlocks.KITCHEN_BORDER.get());
             dropSelf(ModBlocks.QUARRY.get());
         }
