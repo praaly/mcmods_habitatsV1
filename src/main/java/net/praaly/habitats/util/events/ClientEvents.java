@@ -17,7 +17,7 @@ import net.praaly.habitats.setup.gui.GenericStorageScreen;
 import net.praaly.habitats.setup.inventory.GenericStorageContainer;
 
 public class ClientEvents {
-	
+
 	@EventBusSubscriber(value = {Dist.CLIENT}, modid = HabitatsMain.MOD_ID, bus = Bus.MOD)
 	public static class ModClientEvents {
 		@SubscribeEvent
@@ -28,7 +28,7 @@ public class ClientEvents {
 					ModContainerTypes.KITCHEN_CABINET_CONTAINER.get(), GenericStorageScreen::new);
 		}
 	}
-	
+
 	static boolean i = false;
 
 

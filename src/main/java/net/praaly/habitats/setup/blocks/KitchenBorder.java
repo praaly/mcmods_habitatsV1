@@ -28,14 +28,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.praaly.habitats.setup.inventory.InventoryCreative;
 
-public class kitchenBorder extends BaseHorizontalBlock {
+public class KitchenBorder extends BaseHorizontalBlock {
 
 	private static final VoxelShape SHAPE = Stream.of(
 			Block.box(0, 14, 0, 16, 16, 16),
 			Block.box(0, 0, 2, 16, 14, 16)
 	).reduce((v1, v2) -> {return VoxelShapes.join(v1, v2, IBooleanFunction.OR);}).get();
 
-	public kitchenBorder(Properties properties) {
+	public KitchenBorder(Properties properties) {
 		super(properties);
 		runCalculation(SHAPE);
 	}
