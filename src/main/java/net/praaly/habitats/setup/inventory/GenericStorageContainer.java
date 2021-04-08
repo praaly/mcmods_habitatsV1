@@ -4,9 +4,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.RegistryObject;
 import net.praaly.habitats.setup.ModContainerTypes;
 
 import javax.annotation.Nullable;
@@ -16,10 +18,10 @@ public class GenericStorageContainer extends Container {
     private final StorageContainers type;
 
     public GenericStorageContainer(IInventory container, PlayerInventory inventory, int id, StorageContainers type) {
-        this(container, inventory, id, type, type.getRows(), type.getColumns(), type.getConX(), type.getConY(), type.getInvX(), type.getInvY());
+        this(type.containerType.get().get(), container, inventory, id, type, type.getRows(), type.getColumns(), type.getConX(), type.getConY(), type.getInvX(), type.getInvY());
     }
-    public GenericStorageContainer(IInventory container, PlayerInventory inventory, int id, @Nullable StorageContainers type, int rows, int columns, int containerX, int containerY, int inventoryX, int inventoryY) {
-        super(ModContainerTypes.KITCHEN_CABINET_CONTAINER.get(), id);
+    public GenericStorageContainer(ContainerType<GenericStorageContainer> containerType, IInventory container, PlayerInventory inventory, int id, @Nullable StorageContainers type, int rows, int columns, int containerX, int containerY, int inventoryX, int inventoryY) {
+        super(containerType, id);
         this.type = type;
         this.totalSlots = rows * columns;
         checkContainerSize(container, totalSlots);
