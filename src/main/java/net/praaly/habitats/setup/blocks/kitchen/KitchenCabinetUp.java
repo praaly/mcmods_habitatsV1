@@ -60,7 +60,7 @@ public class KitchenCabinetUp extends BaseHorizontalBlock {
 	@Nullable
 	@Override
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-		return new KitchenCabinetTile(); //Change this if copied
+		return new KitchenCabinetUpTile(); //Change this if copied
 	}
 
 	@SuppressWarnings("deprecation")
