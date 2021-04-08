@@ -8,10 +8,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
-import net.praaly.habitats.setup.blocks.KitchenCabinet;
-import net.praaly.habitats.setup.blocks.KitchenCabinetTile;
+import net.praaly.habitats.setup.blocks.kitchen.*;
 import net.praaly.habitats.setup.blocks.Quarry.Quarry;
-import net.praaly.habitats.setup.blocks.KitchenBorder;
 import net.praaly.habitats.setup.inventory.InventoryCreative;
 
 import java.util.function.Supplier;
@@ -39,6 +37,22 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
 
     /* CUSOTM BLOCKS*/
+
+    /* quarry_block*/
+    public static final RegistryObject<Quarry> QUARRY = register("quarry_block", () ->
+            new Quarry(AbstractBlock.Properties.of(Material.METAL)
+                    .strength(4, 20)
+                    .sound(SoundType.METAL)));
+    /* ------------------------------------------------------ */
+    /* kitchen_border*/
+    public static final RegistryObject<Block> KITCHEN_BORDER = register("kitchen_border", () ->
+            new KitchenBorder(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+    /* ------------------------------------------------------ */
+    /* kitchen_cabinet*/
     public static final RegistryObject<Block> KITCHEN_CABINET = register("kitchen_cabinet", () ->
             new KitchenCabinet(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
@@ -48,27 +62,52 @@ public class ModBlocks {
 
     public static final RegistryObject<TileEntityType<KitchenCabinetTile>> KITCHEN_CABINET_TILE =
             registerTile("kitchen_cabinet_tile", KitchenCabinetTile::new , KITCHEN_CABINET);
-
-    private static <T extends TileEntity> RegistryObject<TileEntityType<T>> registerTile(String name, Supplier<T> tile, RegistryObject<Block> block) {
-        return Registration.TILE_ENTITIES.register(name, () -> TileEntityType.Builder.of(tile, block.get()).build(null));
-    }
-
-    public static final RegistryObject<Block> KITCHEN_BORDER = register("kitchen_border", () ->
-            new KitchenBorder(AbstractBlock.Properties.of(Material.METAL)
+    /* ------------------------------------------------------ */
+    /* kitchen_cabinet_up*/
+    public static final RegistryObject<Block> KITCHEN_CABINET_UP = register("kitchen_cabinet_up", () ->
+            new KitchenCabinetUp(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)
                     .sound(SoundType.METAL)));
 
-    public static final RegistryObject<Quarry> QUARRY = register("quarry_block", () ->
-            new Quarry(AbstractBlock.Properties.of(Material.METAL)
-                    .strength(4, 20)
+    public static final RegistryObject<TileEntityType<KitchenCabinetUpTile>> KITCHEN_CABINET_UP_TILE =
+            registerTile("kitchen_cabinet_up_tile", KitchenCabinetUpTile::new , KITCHEN_CABINET_UP);
+    /* ------------------------------------------------------ */
+    /* kitchen_trash*/
+    public static final RegistryObject<Block> KITCHEN_TRASH = register("kitchen_trash", () ->
+            new KitchenTrash(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
                     .sound(SoundType.METAL)));
 
+    public static final RegistryObject<TileEntityType<KitchenTrashTile>> KITCHEN_TRASH_TILE =
+            registerTile("kitchen_trash_tile", KitchenTrashTile::new , KITCHEN_TRASH);
+    /* ------------------------------------------------------ */
+
+
+    public static final RegistryObject<Block> KITCHEN_COOK = register("kitchen_cook", () ->
+            new KitchenCook(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> KITCHEN_SINK = register("kitchen_sink", () ->
+            new KitchenCook(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
     static void register() {}
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return Registration.BLOCKS.register(name, block);
+    }
+
+    private static <T extends TileEntity> RegistryObject<TileEntityType<T>> registerTile(String name, Supplier<T> tile, RegistryObject<Block> block) {
+        return Registration.TILE_ENTITIES.register(name, () -> TileEntityType.Builder.of(tile, block.get()).build(null));
     }
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {

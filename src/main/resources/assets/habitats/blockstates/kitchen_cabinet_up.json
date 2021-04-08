@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "habitats:block/kitchen_cabinet_up" },
+    "facing=north": { "model": "habitats:block/kitchen_cabinet_up", "y": 180 },
+    "facing=east":  { "model": "habitats:block/kitchen_cabinet_up", "y": 270 },
+    "facing=west":  { "model": "habitats:block/kitchen_cabinet_up", "y": 90 }
+  }
+}

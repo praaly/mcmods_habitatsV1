@@ -26,6 +26,10 @@ public class ClientEvents {
 			RenderingRegistry.registerEntityRenderingHandler(ModEntity.GUARD_TRADER.get(), GuardTradersRenderer::new);
 			ScreenManager.<GenericStorageContainer, GenericStorageScreen<GenericStorageContainer>>register(
 					ModContainerTypes.KITCHEN_CABINET_CONTAINER.get(), GenericStorageScreen::new);
+			ScreenManager.<GenericStorageContainer, GenericStorageScreen<GenericStorageContainer>>register(
+					ModContainerTypes.KITCHEN_CABINET_UP_CONTAINER.get(), GenericStorageScreen::new);
+			ScreenManager.<GenericStorageContainer, GenericStorageScreen<GenericStorageContainer>>register(
+					ModContainerTypes.KITCHEN_TRASH_CONTAINER.get(), GenericStorageScreen::new);
 		}
 	}
 

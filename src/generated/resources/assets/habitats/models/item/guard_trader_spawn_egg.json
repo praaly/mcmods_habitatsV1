@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "habitats:item/guard_trader_spawn_egg"
-  }
-}
