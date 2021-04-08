@@ -24,6 +24,7 @@ public class ModContainerTypes {
     private static <T extends TileEntity> RegistryObject<ContainerType<GenericStorageContainer>> registerGenericContainer(String name, StorageContainers containerType, RegistryObject<TileEntityType<T>> tile) {
         return Registration.CONTAINERS.register(name, () -> IForgeContainerType.create((windowId, inv, data) ->
                 new GenericStorageContainer((IInventory) tile.get().create().getTileEntity(), inv, windowId, containerType))
+
         );
     }
 }
