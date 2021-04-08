@@ -10,8 +10,6 @@ import net.praaly.habitats.setup.inventory.GenericStorageContainer;
 import net.praaly.habitats.setup.inventory.StorageContainers;
 
 public class ModContainerTypes {
-    static void register() {}
-
     public static final RegistryObject<ContainerType<GenericStorageContainer>> KITCHEN_CABINET_CONTAINER =
             registerGenericContainer("kitchen_cabinet_container", StorageContainers.KITCHEN_CABINET, ModBlocks.KITCHEN_CABINET_TILE);
 
@@ -27,4 +25,6 @@ public class ModContainerTypes {
 
         );
     }
+
+    static void register() {}
 }
