@@ -1,8 +1,7 @@
 {
 
-
   "itemGroup.decoratives": "Decoratives",
-  "itemGroup.others": "Others",
+  "itemGroup.ressources": "Others",
 
   "block.habitats.teorite_block": "Block of Teorite",
   "block.habitats.teorite_ore": "Teorite Ore",
@@ -29,10 +28,14 @@
   "container.habitats.kitchen_cabinet_up": "Cabinet Storage",
   "container.habitats.kitchen_trash": "Trash",
 
+
+  "block.habitats.kitchen_cabinet": "Kitchen Cabinet",
+  "block.habitats.kitchen_cabinet_Up": "Kitchen Cabinet Up",
+
   "block.habitats.kitchen_cook": "Kitchen Cook",
   "block.habitats.kitchen_sink": "Kitchen Sink",
   "block.habitats.kitchen_border": "Kitchen Border",
-  "block.habitats.kitchen_trash": "Kitchen Trash",
+  "block.habitats.kitchen_trash": "Kitchen Trash"
 
 
 }

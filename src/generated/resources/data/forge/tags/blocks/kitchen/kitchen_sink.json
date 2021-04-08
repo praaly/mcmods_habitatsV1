@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "habitats:kitchen_sink",
+    "#forge:kitchen/kitchen_sink"
+  ]
+}
