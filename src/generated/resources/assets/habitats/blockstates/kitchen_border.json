@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "habitats:block/kitchen_border"
-    }
+    "facing=north": { "model": "habitats:block/kitchen_border" },
+    "facing=south": { "model": "habitats:block/kitchen_border", "y": 180 },
+    "facing=west":  { "model": "habitats:block/kitchen_border", "y": 270 },
+    "facing=east":  { "model": "habitats:block/kitchen_border", "y": 90 }
   }
 }
