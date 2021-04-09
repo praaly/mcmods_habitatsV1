@@ -25,6 +25,7 @@
   "item.habitats.guard_trader_spawn_egg": "Guard Trader Spawn Egg",
 
   "container.habitats.kitchen_cabinet": "Cabinet Storage",
+  "container.habitats.kitchen_fridge": "Fridge Storage",
   "container.habitats.kitchen_cabinet_up": "Cabinet Storage",
   "container.habitats.kitchen_trash": "Trash",
 
@@ -33,6 +34,7 @@
   "block.habitats.kitchen_cabinet_Up": "Kitchen Cabinet Up",
 
   "block.habitats.kitchen_cook": "Kitchen Cook",
+  "block.habitats.kitchen_fridge": "Kitchen Fridge",
   "block.habitats.kitchen_sink": "Kitchen Sink",
   "block.habitats.kitchen_border": "Kitchen Border",
   "block.habitats.kitchen_trash": "Kitchen Trash"

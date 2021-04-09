@@ -22,6 +22,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.KITCHEN_COOK.get());
         simpleBlock(ModBlocks.KITCHEN_SINK.get());
         simpleBlock(ModBlocks.KITCHEN_TRASH.get());
+        simpleBlock(ModBlocks.KITCHEN_FRIDGE.get());
 
     }
 }

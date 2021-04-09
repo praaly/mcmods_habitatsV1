@@ -19,6 +19,9 @@ public class ModContainerTypes {
     public static final RegistryObject<ContainerType<GenericStorageContainer>> KITCHEN_TRASH_CONTAINER =
             registerGenericContainer("kitchen_trash_container", StorageContainers.KITCHEN_TRASH, ModBlocks.KITCHEN_TRASH_TILE);
 
+    public static final RegistryObject<ContainerType<GenericStorageContainer>> KITCHEN_FRIDGE_CONTAINER =
+            registerGenericContainer("kitchen_fridge_container", StorageContainers.KITCHEN_FRIDGE, ModBlocks.KITCHEN_FRIDGE_TILE);
+
     private static <T extends TileEntity> RegistryObject<ContainerType<GenericStorageContainer>> registerGenericContainer(String name, StorageContainers containerType, RegistryObject<TileEntityType<T>> tile) {
         return Registration.CONTAINERS.register(name, () -> IForgeContainerType.create((windowId, inv, data) ->
                 new GenericStorageContainer((IInventory) tile.get().create().getTileEntity(), inv, windowId, containerType))

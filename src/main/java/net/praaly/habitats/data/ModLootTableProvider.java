@@ -48,6 +48,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(ModBlocks.KITCHEN_COOK.get());
             dropSelf(ModBlocks.KITCHEN_SINK.get());
             dropSelf(ModBlocks.KITCHEN_TRASH.get());
+            dropSelf(ModBlocks.KITCHEN_FRIDGE.get());
             dropSelf(ModBlocks.QUARRY.get());
         }
 

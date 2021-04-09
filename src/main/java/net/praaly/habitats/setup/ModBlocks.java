@@ -86,6 +86,17 @@ public class ModBlocks {
             registerTile("kitchen_trash_tile", KitchenTrashTile::new , KITCHEN_TRASH);
     /* ------------------------------------------------------ */
 
+    /* kitchen_fridge*/
+    public static final RegistryObject<Block> KITCHEN_FRIDGE = register("kitchen_fridge", () ->
+            new KitchenFridge(AbstractBlock.Properties.of(Material.METAL)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3, 10)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<TileEntityType<KitchenFridgeTile>> KITCHEN_FRIDGE_TILE =
+            registerTile("kitchen_fridge_tile", KitchenFridgeTile::new , KITCHEN_FRIDGE);
+    /* ------------------------------------------------------ */
 
     public static final RegistryObject<Block> KITCHEN_COOK = register("kitchen_cook", () ->
             new KitchenCook(AbstractBlock.Properties.of(Material.METAL)
@@ -95,7 +106,7 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> KITCHEN_SINK = register("kitchen_sink", () ->
-            new KitchenCook(AbstractBlock.Properties.of(Material.METAL)
+            new KitchenSink(AbstractBlock.Properties.of(Material.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3, 10)

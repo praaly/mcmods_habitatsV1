@@ -14,7 +14,9 @@ public enum StorageContainers {
     KITCHEN_CABINET_UP(() -> ModContainerTypes.KITCHEN_CABINET_UP_CONTAINER, 2, 2, 74, 20, 8, 85,
             new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_cabinet_gui.png")),
     KITCHEN_TRASH(() -> ModContainerTypes.KITCHEN_TRASH_CONTAINER, 1, 1, 74, 20, 8, 85,
-            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_trash_gui.png"));
+            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_trash_gui.png")),
+    KITCHEN_FRIDGE(() -> ModContainerTypes.KITCHEN_FRIDGE_CONTAINER, 2, 2, 74, 20, 8, 85,
+            new ResourceLocation(HabitatsMain.MOD_ID, "textures/gui/kitchen_cabinet_gui.png"));
 
     public final Supplier<RegistryObject<ContainerType<GenericStorageContainer>>> containerType;
     private final int rows;

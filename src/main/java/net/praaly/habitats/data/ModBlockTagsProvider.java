@@ -42,6 +42,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_TRASH).add(ModBlocks.KITCHEN_TRASH.get());
         tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_TRASH).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_TRASH);
 
+        tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_FRIDGE).add(ModBlocks.KITCHEN_FRIDGE.get());
+        tag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_FRIDGE).addTag(ModTags.Blocks.STORAGE_BLOCKS_KITCHEN_FRIDGE);
+
+
+
         tag(ModTags.Blocks.QUARRY_BLOCK).add(ModBlocks.QUARRY.get());
         tag(Tags.Blocks.CHESTS).addTag(ModTags.Blocks.QUARRY_BLOCK);
 

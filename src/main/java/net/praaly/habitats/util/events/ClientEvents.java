@@ -30,6 +30,10 @@ public class ClientEvents {
 					ModContainerTypes.KITCHEN_CABINET_UP_CONTAINER.get(), GenericStorageScreen::new);
 			ScreenManager.<GenericStorageContainer, GenericStorageScreen<GenericStorageContainer>>register(
 					ModContainerTypes.KITCHEN_TRASH_CONTAINER.get(), GenericStorageScreen::new);
+			ScreenManager.<GenericStorageContainer, GenericStorageScreen<GenericStorageContainer>>register(
+					ModContainerTypes.KITCHEN_FRIDGE_CONTAINER.get(), GenericStorageScreen::new);
+
+
 		}
 	}
 
